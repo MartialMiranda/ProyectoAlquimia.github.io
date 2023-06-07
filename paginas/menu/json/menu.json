@@ -1,0 +1,50 @@
+{
+    "menu": [
+      {
+        "imagen": "./img/plato5.jpg",        
+        "nombre": "del Oriente y del Chaco",
+        "categoria": "Buffet",
+        "entrada": "Vichyssoise. Quiche Lorraine.",
+        "platoPrincipal": "Vichyssoise. Quiche Lorraine.",
+        "postre": "Vichyssoise. Quiche Lorraine.",
+        "horario1": "12:00 a 12:30",
+        "horario2": "17:00 a 17:30",
+        "fecha1": "14 de Marzo",
+        "fecha2": "28 de Marzo",
+        "fecha3": "14 de Marzo",
+        "fecha4": "28 de Marzo",
+        "precio": "670 BS"
+      },
+      {
+        "imagen": "./img/plato2.jpg",  
+        "nombre": "Francesa",
+        "categoria": "Menu a eleccion",
+        "entrada": "Vichyssoise. Quiche Lorraine.",
+        "platoPrincipal": "Vichyssoise. Quiche Lorraine.",
+        "postre": "Blanquet de ternera con cebollitas glaseadas. Entrecotte grille, beurre marchand de vin y tomates provenzales.",
+        "horario1": "12:00 a 12:30",
+        "horario2": "17:00 a 17:30",
+        "fecha1": "14 de Marzo",
+        "fecha2": "28 de Marzo",
+        "fecha3": "14 de Marzo",
+        "fecha4": "28 de Marzo",
+        "precio": "60 BS"
+      },
+      {
+        "imagen": "./img/plato2.jpg",  
+        "nombre": "Francesa",
+        "categoria": "Menu a eleccion",
+        "entrada": "Vichyssoise. Quiche Lorraine.",
+        "platoPrincipal": "Vichyssoise. Quiche Lorraine.",
+        "postre": "Blanquet de ternera con cebollitas glaseadas. Entrecotte grille, beurre marchand de vin y tomates provenzales.",
+        "horario1": "12:00 a 12:30",
+        "horario2": "17:00 a 17:30",
+        "fecha1": "14 de Marzo",
+        "fecha2": "28 de Marzo",
+        "fecha3": "14 de Marzo",
+        "fecha4": "28 de Marzo",
+        "precio": "60 BS"
+      }
+    ]
+  }
+  

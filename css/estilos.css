@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(255, 255, 255, 0.80);
+    /* Cambiar el color de fondo */
+    overflow-x: hidden;
+    /* Deshabilitar el desplazamiento horizontal */
+    overflow-y: auto;
+    /* Habilitar el desplazamiento vertical */
+}
+
+body::after {
+    content: "";
+    background-image: url(/img/tresamigos.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFA800;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+.container {
+    min-width: 100vh;
+}
+
+.container .row {
+    margin-top: 40px;
+}
+
+
+
+/* inicio login */
+
+.modal {
+    background-color: rgba(216, 216, 216, 70%);
+}
+
+.modal-content {
+    background: rgba(255, 168, 0, 15%);
+    border-radius: 30px;
+    border: 0;
+}
+
+
+.modal-title {
+    text-align: center;
+}
+
+.social-logo {
+    width: 62px;
+    font-size: 2rem;
+}
+
+.social-logo:hover {
+    border-radius: 50%;
+    transition: border-color 0.3s;
+    border: 2px solid transparent;
+}
+
+
+/* Estilos para centrar el contenido del formulario */
+.modal .modal-header .modal-title {
+    margin-top: 0;
+    padding-top: 0;
+    color: #FFA800;
+    Font-style: Black;
+    font-size: 38px;
+    font-weight: bold;
+}
