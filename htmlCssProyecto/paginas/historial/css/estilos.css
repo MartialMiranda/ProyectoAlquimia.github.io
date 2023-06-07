@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(255, 255, 255, 0.80);
+    /* Cambiar el color de fondo */
+    overflow-x: hidden;
+    /* Deshabilitar el desplazamiento horizontal */
+    overflow-y: auto;
+    /* Habilitar el desplazamiento vertical */
+}
+
+body::after {
+    content: "";
+    background-image: url(/img/tresamigos.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.container {
+    min-width: 100vh;
+}
+
+h3{
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFA800;
+}
+p{
+    font-size: 16px;
+}
+/* comienzo header */
+.navbar {
+    background-color: #000000;
+}
+
+.navbar a{
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link.active:hover {
+    border-bottom: 2px solid #ffffff;
+} 
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 20px;
+}
+
+.btn-login {
+    border: 1px solid #fff;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.btn-login:hover {
+    background-color: #141414;
+    background-color: #ffffff;
+}
+
+/* fin header */
+
+/* comienzo content */
+.container .content{
+    margin-top: 80px;
+}
+
+.content .row .container{
+ margin: 20px 20px;
+}
+/* fin content */
+
+/* Estrellas */
+.star {
+    font-size: 24px;
+    color: #FFA800;
+    cursor: pointer;
+  }
+  
+  .star:hover {
+    color: #FFD700;
+  }
+  /* fin estrellas */
+
+/* inicio login */
+
+.modal {
+    background-color: rgba(216, 216, 216, 70%);
+}
+.modal-content{
+    background-color: #000000;
+}
+.modal-content{
+    background: rgba(255, 168, 0, 15%);
+    border-radius: 30px;
+    border: 0;
+}
+
+.modal-header {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: #000; 
+    border: none;
+    font-size: 1.5em;
+}
+.close:hover {
+    border-style: none;
+    border-radius: 0;
+}
+.modal-title {
+    text-align: center;
+}
+
+.form-group input{
+    border-radius: 7px;
+}
+.form-group .btn{
+    background-color: #FFA800;
+    border: 7px;
+}
+.form-group label{
+    font-size: 16px;
+}
+.form-group .btn:hover{
+    background: #ffffff;
+    color: #FFA800;
+}
+.fab{
+    font-size: 2rem;
+}
+/* Estilos para centrar el contenido del formulario */
+
+.modal .modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.modal .modal-header .modal-title{
+    margin-top: 0;
+    padding-top: 0;
+    color: #FFA800;
+    Font-style: Black;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+
+
+/* comienzo registro */
+.modal .modal-content {
+    background-color: rgba(255, 168, 0, 0.15);
+    border-radius: 30px;
+    border: none;
+}
+
+.modal .modal-header {
+    position: relative;
+}
+
+.modal .close {
+    position: absolute;
+    top: -30px;
+    right: 50%;
+    color: #000;
+    border: none;
+    font-size: 1.5em;
+}
+
+.modal .modal-title {
+    text-align: center;
+    color: #FFA800;
+    font-style: black;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.modal .form-group input {
+    border-radius: 7px;
+}
+
+.modal .form-group .btn {
+    background-color: #FFA800;
+    border: none;
+}
+
+.modal .form-group label {
+    font-size: 16px;
+}
+
+.modal .form-group .btn:hover {
+    background: #ffffff;
+    color: #FFA800;
+}
+
+.modal .text-center {
+    text-align: center;
+}
+
+.modal .mt-4 {
+    margin-top: 4rem;
+}
+/* Estilos para el campo de fecha de nacimiento */
+.input-group.date .input-group-text {
+    cursor: pointer;
+}
+
+/* Estilos para el campo de género */
+.form-group select {
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+}
+/* fin registro */
+
+/* comeinzo footer */
+.footer-section {
+    background-color: #141414;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-section .nav-link {
+    Font-size: 12px;
+    color: #ffffff;
+}
+
+/* fin footer */
