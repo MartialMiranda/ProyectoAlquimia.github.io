@@ -53,8 +53,6 @@
         </div>
     </nav>
 
-
-
     <!-- contenedor -->
 
     <div class="container body-container mt-5 " style="margin-bottom: 80px;">
@@ -116,9 +114,6 @@
             </a>
         </div>
     </div>
-
-
-
     <!-- fin contenedor -->
 
     <!-- Login -->
@@ -151,7 +146,7 @@
                                     <p class="mb-0">¿Olvidaste tu contraseña? <a href="#">Haz clic aquí</a></p>
                                 </div>
                                 <div class="col text-right">
-                                    <button type="submit" class="btn btn-sm" ">Acceder</button>                                        
+                                    <button type="submit" class="btn btn-sm">Acceder</button>
                                 </div>
                             </div>
                         </div>
@@ -159,251 +154,243 @@
 
                     <!-- Iniciar sesión con Google, Facebook, Twitter -->
                     <div class=" row">
-                                        <div class="col text-center">
-                                            <h5>Iniciar Sesión con:</h5>
-                                        </div>
-                                </div>
-                                <div class="text-center mt-4">
-                                    <a href="#" class="social-login-icon"><img class="social-logo"
-                                            src="./img/facebook.png" alt="Logo"></a>
-                                    <a href="#" class="social-login-icon"><img class="social-logo"
-                                            src="./img/google.png" alt="Logo"></a>
-                                    <a href="#" class="social-login-icon"><img class="social-logo"
-                                            src="./img/twiter.png" alt="Logo"></a>
-                                </div>
-
-
-                                <!-- Pregunta de registro -->
-                                <div class="text-center mt-4">
-                                    <p>¿No tienes una cuenta? <a href="#registerModal" data-toggle="modal"
-                                            data-dismiss="modal">Regístrate</a></p>
-                                    <p><a href="./administracion/index.html" style="text-decoration: none;">Iniciar Como
-                                            Administrador</a></p>
-                                </div>
-                            </div>
+                        <div class="col text-center">
+                            <h5>Iniciar Sesión con:</h5>
                         </div>
-                </div>
-            </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#" class="social-login-icon"><img class="social-logo" src="./img/facebook.png"
+                                alt="Logo"></a>
+                        <a href="#" class="social-login-icon"><img class="social-logo" src="./img/google.png"
+                                alt="Logo"></a>
+                        <a href="#" class="social-login-icon"><img class="social-logo" src="./img/twiter.png"
+                                alt="Logo"></a>
+                    </div>
 
 
-
-            <!-- Register -->
-            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="registerModalLabel">Registrarse</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Formulario de registro -->
-                            <form>
-                                <div class="form-group">
-                                    <label for="username" class="form-label">Nombre de usuario</label>
-                                    <input type="text" class="form-control" id="username"
-                                        placeholder="Ingrese su nombre de usuario">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="form-label">Correo electrónico</label>
-                                    <input type="email" class="form-control" id="email"
-                                        placeholder="Ingrese su correo electrónico">
-                                </div>
-                                <!-- Fecha de nacimiento -->
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="dob">Fecha de nacimiento</label>
-                                        <div class="input-group date" id="dobPicker" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input"
-                                                data-target="#dobPicker" placeholder="Seleccione una fecha" />
-                                            <div class="input-group-append" data-target="#dobPicker"
-                                                data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar" style="color: #FFA800;"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                    <!-- Género -->
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="gender" class="form-label">Género</label>
-                                            <select class="form-control" id="gender">
-                                                <option selected>Seleccione...</option>
-                                                <option value="male">Masculino</option>
-                                                <option value="female">Femenino</option>                                               
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <button type="submit" class="btn btn-primary" data-toggle="modal"
-                                                data-dismiss="modal"
-                                                data-target="#registroExitosoModal">Registrarse</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <!-- Pregunta de inicio de sesión -->
-                            <div class="text-center mt-4">
-                                ¿Ya tienes una cuenta? <a href="#loginModal" data-toggle="modal"
-                                    data-dismiss="modal">Iniciar
-                                    sesión</a>
-                            </div>
-                        </div>
+                    <!-- Pregunta de registro -->
+                    <div class="text-center mt-4">
+                        <p>¿No tienes una cuenta? <a href="#registerModal" data-toggle="modal"
+                                data-dismiss="modal">Regístrate</a></p>
+                        <p><a href="./administracion/index.html" style="text-decoration: none;">Iniciar Como
+                                Administrador</a></p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Registro Exitoso -->
-            <div class="modal fade" id="registroExitosoModal" tabindex="-1" role="dialog"
-                aria-labelledby="registroExitosoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content text-center">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="registroExitosoModalLabel">¡REGISTRO EXITOSO!</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Se enviará un mensaje de confirmación al correo electrónico.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
-                                data-target="#loginModal">Aceptar</button>
-                        </div>
-                    </div>
+    <!-- Register -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Registrarse</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
-
-
-
-            <!-- form contacto -->
-            <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contactModalLabel">CONTACTO</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                <div class="modal-body">
+                    <!-- Formulario de registro -->
+                    <form>
+                        <div class="form-group">
+                            <label for="username" class="form-label">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="username"
+                                placeholder="Ingrese su nombre de usuario">
                         </div>
-                        <div class="modal-body">
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="nombreCompleto">Nombre Completo</label>
-                                    <input type="text" class="form-control" id="nombreCompleto"
-                                        placeholder="Nombre Completo">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Ingrese su correo electrónico">
+                        </div>
+                        <!-- Fecha de nacimiento -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="dob">Fecha de nacimiento</label>
+                                <div class="input-group date" id="dobPicker" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input"
+                                        data-target="#dobPicker" placeholder="Seleccione una fecha" />
+                                    <div class="input-group-append" data-target="#dobPicker"
+                                        data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"
+                                                style="color: #FFA800;"></i></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="telefono">Teléfono</label>
-                                    <input type="tel" class="form-control" id="telefono" placeholder="Teléfono">
-                                </div>
-                                <div class="form-group col">
-                                    <label for="correoElectronico">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="correoElectronico"
-                                        placeholder="Correo Electrónico">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" placeholder="Ingrese sus observaciones"
-                                    rows="3" style="resize: none;"></textarea>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col text-end">
-                                    <button type="button" class="btn btn-primary">Enviar</button>
+                            <!-- Género -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="gender" class="form-label">Género</label>
+                                    <select class="form-control" id="gender">
+                                        <option selected>Seleccione...</option>
+                                        <option value="male">Masculino</option>
+                                        <option value="female">Femenino</option>
+                                    </select>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="form-group">
                             <div class="row">
                                 <div class="col text-center">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.115673511814!2d-63.17114867269991!3d-17.733735243297552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e7a673b1f13b%3A0xd5fa3d346c22f0!2sUniversidad%20para%20el%20desarrollo%20y%20la%20innovaci%C3%B3n!5e0!3m2!1ses!2sbo!4v1685585519482!5m2!1ses!2sbo"
-                                            allowfullscreen="" loading="lazy"
-                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
+                                    <button type="submit" class="btn btn-primary" data-toggle="modal"
+                                        data-dismiss="modal" data-target="#registroExitosoModal">Registrarse</button>
                                 </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Pregunta de inicio de sesión -->
+                    <div class="text-center mt-4">
+                        ¿Ya tienes una cuenta? <a href="#loginModal" data-toggle="modal" data-dismiss="modal">Iniciar
+                            sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registro Exitoso -->
+    <div class="modal fade" id="registroExitosoModal" tabindex="-1" role="dialog"
+        aria-labelledby="registroExitosoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registroExitosoModalLabel">¡REGISTRO EXITOSO!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Se enviará un mensaje de confirmación al correo electrónico.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#loginModal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- form contacto -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">CONTACTO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="nombreCompleto">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombreCompleto" placeholder="Nombre Completo">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group col">
+                            <label for="correoElectronico">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correoElectronico"
+                                placeholder="Correo Electrónico">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" placeholder="Ingrese sus observaciones" rows="3"
+                            style="resize: none;"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col text-end">
+                            <button type="button" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.115673511814!2d-63.17114867269991!3d-17.733735243297552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e7a673b1f13b%3A0xd5fa3d346c22f0!2sUniversidad%20para%20el%20desarrollo%20y%20la%20innovaci%C3%B3n!5e0!3m2!1ses!2sbo!4v1685585519482!5m2!1ses!2sbo"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- fin contacto -->
+    <!-- fin contacto -->
 
-            <!-- Footer -->
-            <footer class="footer-section fixed-bottom">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-sm-4 text-center">
-                            <a class="nav-link active text-white m-2" href="https://goo.gl/maps/xGwMt8FBZPmgcnPB7"
-                                target="_blank">Av. Banzer entre 5° y 6º Anillo</a>
-                        </div>
-                        <div class="col-12 col-sm-4 text-center">
-                            <a class="nav-link active text-white m-2"
-                                href="mailto:restaurante@udi.com">restaurante@udi.com</a>
-                        </div>
-                        <div class="col-12 col-sm-4 text-center">
-                            <a class="nav-link active text-white m-2" href="https://wa.me/59171399694"
-                                target="_blank">+591
-                                71399694</a>
-                        </div>
-                    </div>
+    <!-- Footer -->
+    <footer class="footer-section fixed-bottom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-4 text-center">
+                    <a class="nav-link active text-white m-2" href="https://goo.gl/maps/xGwMt8FBZPmgcnPB7"
+                        target="_blank">Av. Banzer entre 5° y 6º Anillo</a>
                 </div>
-            </footer>
+                <div class="col-12 col-sm-4 text-center">
+                    <a class="nav-link active text-white m-2" href="mailto:restaurante@udi.com">restaurante@udi.com</a>
+                </div>
+                <div class="col-12 col-sm-4 text-center">
+                    <a class="nav-link active text-white m-2" href="https://wa.me/59171399694" target="_blank">+591
+                        71399694</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
-            <script src="js/script.js"></script>
-
-
-            <script>
-
-
-                $(document).ready(function () {
-                    $('#dobPicker').datepicker({
-                        format: 'dd-mm-yyyy',
-                        autoclose: true
-                    });
-                });
+    <script src="js/script.js"></script>
 
 
-                window.addEventListener("scroll", function () {
-                    var footer = document.querySelector(".footer-section");
-                    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop ||
-                        0;
-                    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-                        || 0;
-                    var bodyHeight = Math.max(
-                        document.body.scrollHeight,
-                        document.documentElement.scrollHeight,
-                        document.body.offsetHeight,
-                        document.documentElement.offsetHeight,
-                        document.body.clientHeight,
-                        document.documentElement.clientHeight
-                    );
+    <script>
 
-                    if (scrollPosition + windowHeight >= bodyHeight) {
-                        footer.style.display = "block";
-                    } else {
-                        footer.style.display = "none";
-                    }
-                });
 
-            </script>
+        $(document).ready(function () {
+            $('#dobPicker').datepicker({
+                format: 'dd-mm-yyyy',
+                autoclose: true
+            });
+        });
+
+
+        window.addEventListener("scroll", function () {
+            var footer = document.querySelector(".footer-section");
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop ||
+                0;
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+                || 0;
+            var bodyHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.offsetHeight,
+                document.body.clientHeight,
+                document.documentElement.clientHeight
+            );
+
+            if (scrollPosition + windowHeight >= bodyHeight) {
+                footer.style.display = "block";
+            } else {
+                footer.style.display = "none";
+            }
+        });
+
+    </script>
 
 </body>
 

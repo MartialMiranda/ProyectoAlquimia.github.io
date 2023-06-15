@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdministracionAlquimia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
@@ -18,6 +20,7 @@
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Bienvenido al sistema de administracion</a>
+            <a class="navbar-brand btn-success" href="../index.html">Salir de administracion</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">
@@ -68,31 +71,421 @@
         </div>
     </nav>
 
-    <div class="container" style="margin-top: 80px;">
-        <h1>Reservas de Comidas</h1>        
-        <table id="reservasTable" class="table table-striped m-1">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <div id="paginacion" class="mt-3"></div>
+    <div class="container" style="margin-top: 100px;">
+        <div class="row text-center">
+            <div class="col" style="font-size: 30px; font-weight: 800; color: #FFA800;">ARMAR UN MENU</div>
+            <h3 style="font-size: 20px; color: #FFA800;">Siga los pasos en orden</h3>
+        </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active siguiente-btn" id="uno-tab" data-bs-toggle="tab"
+                    data-bs-target="#uno-tab-pane" type="button" role="tab" aria-controls="uno-tab-pane"
+                    aria-selected="true" style="color: #FFA800;">Paso 1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link siguiente-btn" id="dos-tab" data-bs-toggle="tab" data-bs-target="#dos-tab-pane"
+                    type="button" role="tab" aria-controls="dos-tab-pane" aria-selected="false"
+                    style="color: #FFA800;">Paso
+                    2</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link siguiente-btn" id="tres-tab" data-bs-toggle="tab"
+                    data-bs-target="#tres-tab-pane" type="button" role="tab" aria-controls="tres-tab-pane"
+                    aria-selected="false" style="color: #FFA800;">Paso 3</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link siguiente-btn" id="cuatro-tab" data-bs-toggle="tab"
+                    data-bs-target="#cuatro-tab-pane" type="button" role="tab" aria-controls="cuatro-tab-pane"
+                    aria-selected="false" style="color: #FFA800;">Paso 4</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link siguiente-btn" id="cinco-tab" data-bs-toggle="tab"
+                    data-bs-target="#cinco-tab-pane" type="button" role="tab" aria-controls="cinco-tab-pane"
+                    aria-selected="false" style="color: #FFA800;">Paso 5</button>
+            </li>
+
+        </ul>
+
+        <!-- contenido de los pasos -->
+        <div class="tab-content" id="myTabContent">
+            <!-- agregar un calendario -->
+            <div class="tab-pane fade show active" id="uno-tab-pane" role="tabpanel" aria-labelledby="uno-tab"
+                tabindex="0">
+                <div class="container m-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Agregar fechas al Calendario</h2>
+                            <form id="formulario">
+                                <div class="mb-3">
+                                    <label for="fecha" class="form-label">Fecha</label>
+                                    <input type="date" class="form-control" id="fecha" name="fecha" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="estado" class="form-label">Estado</label>
+                                    <select class="form-select" id="estado" name="estado" required>
+                                        <option value="1">Activo</option>
+                                        <option value="0">Inactivo</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary" id="agregar-btn">Agregar</button>
+                                    </div>
+                                    <div class="col text-end">
+                                        <button type="button" class="btn btn-success"
+                                            id="siguiente-btn">Siguiente</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <div class="container">
+                                <h2>Fechas agregadas:</h2>
+                                <div class="row mr-3" id="fechas-agregadas">
+                                    <!-- Aquí se mostrarán las fechas agregadas dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="dos-tab-pane" role="tabpanel" aria-labelledby="dos-tab" tabindex="0">
+                <div class="container m-3">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Agregar horarios</h2>
+                            <form id="formulario2">
+                                <div class="mb-3">
+                                    <label for="hora-apertura" class="form-label">Hora de Apertura</label>
+                                    <input type="time" class="form-control" id="hora-apertura" name="hora-apertura"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="hora-cierre" class="form-label">Hora de Cierre</label>
+                                    <input type="time" class="form-control" id="hora-cierre" name="hora-cierre"
+                                        required>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary" id="agregar-btn2">Agregar</button>
+                                    </div>
+                                    <div class="col text-end">
+                                        <button type="button" class="btn btn-success siguiente-btn"
+                                            id="siguiente-btn2">Siguiente</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="container">
+                                <h2>Horarios agregados:</h2>
+                                <div class="row mr-3" id="horarios-agregados">
+                                    <!-- Aquí se mostrarán los horarios agregados dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tres-tab-pane" role="tabpanel" aria-labelledby="tres-tab" tabindex="0">
+                <div class="container m-3">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Agregar categorías</h2>
+                            <form id="formulario3">
+                                <div class="mb-3">
+                                    <label for="nombre-categoria" class="form-label">Nombre de la categoría</label>
+                                    <input type="text" class="form-control" id="nombre-categoria"
+                                        name="nombre-categoria" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary" id="agregar-btn3">Agregar</button>
+                                    </div>
+                                    <div class="col text-end">
+                                        <button type="button" class="btn btn-success "
+                                            id="siguiente-btn3">Siguiente</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="container">
+                                <h2>Categorías agregadas:</h2>
+                                <div class="row mr-3" id="categorias-agregadas">
+                                    <!-- Aquí se mostrarán las categorías agregadas dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cuatro-tab-pane" role="tabpanel" aria-labelledby="cuatro-tab" tabindex="0">
+                <div class="container m-3">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Agregar platos</h2>
+                            <form id="formulario4">
+                                <div class="mb-3">
+                                    <label for="categoria-plato" class="form-label">Categoría del plato</label>
+                                    <select class="form-select" id="categoria-plato" name="categoria-plato" required>
+                                        <option value="entradas">Entradas</option>
+                                        <option value="platos-fuertes">Platos Fuertes</option>
+                                        <option value="postres">Postres</option>
+                                        <option value="bebidas">Bebidas</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tipo-cocina" class="form-label">Tipo de cocina</label>
+                                    <input type="text" class="form-control" id="tipo-cocina" name="tipo-cocina"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tipo-plato" class="form-label">Tipo de plato</label>
+                                    <input type="text" class="form-control" id="tipo-plato" name="tipo-plato" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="estado-plato" class="form-label">Estado</label>
+                                    <select class="form-select" id="estado-plato" name="estado-plato" required>
+                                        <option value="1">Activo</option>
+                                        <option value="0">Inactivo</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary" id="agregar-btn4">Agregar</button>
+                                    </div>
+                                    <div class="col text-end">
+                                        <button type="button" class="btn btn-success "
+                                            id="siguiente-btn4">Siguiente</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="container">
+                                <h2>Platos agregados:</h2>
+                                <div class="row mr-3" id="platos-agregados">
+                                    <!-- Aquí se mostrarán los platos agregados dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cinco-tab-pane" role="tabpanel" aria-labelledby="cinco-tab" tabindex="0">
+                <div class="container m-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <h2 class="text-center">Crear Menú</h2>
+                            <form id="formulario5">
+                                <div class="mb-3">
+                                    <label for="titulo" class="form-label">Titulo</label>
+                                    <input type="text" class="form-control" id="titulo" name="titulo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="categoria-select" class="form-label">Categoría</label>
+                                    <select class="form-select" id="categoria-select" name="categoria" required>
+                                        <option value="Buffet">Buffet</option>
+                                        <option value="Menú a la carta">Menú a la carta</option>
+                                        <option value="Menú del día">Menú del día</option>
+                                        <option value="Especial">Especial</option>
+                                        <!-- Agrega más opciones de categoría según tus necesidades -->
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="fecha1-select" class="form-label">Fecha 1</label>
+                                    <select class="form-select" id="fecha1-select" name="fecha1-select" required>
+                                        <option value="2023-06-13">2023-06-13</option>
+                                        <option value="2023-06-14">2023-06-14</option>
+                                        <option value="2023-06-15">2023-06-15</option>
+                                        <!-- Agrega más opciones de fechas aquí -->
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fech2-select" class="form-label">Fecha 2</label>
+                                    <select class="form-select" id="fecha2-select" name="fecha2-select" required>
+                                        <option value="2023-06-13">2023-06-20</option>
+                                        <option value="2023-06-14">2023-07-23</option>
+                                        <option value="2023-06-15">2023-07-30</option>
+                                        <!-- Agrega más opciones de fechas aquí -->
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="horario-select" class="form-label">Horario</label>
+                                    <select class="form-select" id="horario-select" name="horario-select" required>
+                                        <option value="13:00-15:00">13:00 a 15:00</option>
+                                        <option value="16:00-18:00">16:00 a 18:00</option>
+                                        <option value="19:00-21:00">19:00 a 21:00</option>
+                                        <option value="22:00-00:00">22:00 a 00:00</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="plato-menu" class="form-label">Plato</label>
+                                    <select class="form-select" id="plato-menu" name="plato-menu" required>
+                                        <option value="1">Vichyssoise. Quiche</option>
+                                        <option value="2">Lorraine.</option>
+                                        <option value="3">Blanquet de ternera con cebollitas</option>
+
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="precio" class="form-label">Precio</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="precio" name="precio" required>
+                                        <select class="form-select" id="moneda" name="moneda">
+                                            <option value="BS">BS</option>
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="PESOS">Pesos</option>
+                                            <!-- Agrega más opciones de moneda según tus necesidades -->
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="foto" class="form-label">Foto</label>
+                                    <input type="file" class="form-control" id="foto" name="foto" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary" id="crear-menu-btn">Crear
+                                            Menú</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="col-8">
+                            <h2 class="text-center">Pre-Visualizacion</h2>
+                            <div class="container">
+                                <div class="col d-flex justify-content-center">
+                                    <div class="card mb-2 mt-2 shadow">
+                                        <div class="row g-0">
+                                            <div class="col-md-6  d-flex align-items-center">
+                                                <img id="image" class="img-fluid" alt="imagenPLato">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <p class="fs-6 mb-0 " style="color: #FFA800;">Comida <strong
+                                                                    class="fs-6" id="nombre"></strong> </p>
+                                                        </div>
+                                                        <div class="col-4 d-flex justify-content-end mb-0">
+                                                            <p class="fw-bold mb-0" id="categoria"></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="width: 100%; background: #FFA800; height: 2px;"></div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <p class="fw-bold mb-0">Entrada:</p>
+                                                            <p class="fst-normal " id="entrada"></p>
+                                                            <p class="fw-bold mb-0">Plato Principal:</p>
+                                                            <p class="fst-normal " id="principal"></p>
+                                                            <p class="fw-bold mb-0">Postre:</p>
+                                                            <p class="fst-normal" id="postre"></p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p class="fw-bold text-center"
+                                                                style="background: #FFA800; color: #ffff;">Ingreso:
+                                                                <strong id="horario1"></strong>
+                                                            </p>
+                                                            <p class="fw-semibold text-center mb-0" id="fecha1"></p>
+                                                            <p class="fw-semibold text-center" id="fecha2"></p>
+                                                            <p class="fw-bold text-center"
+                                                                style="background: #FFA800; color: #ffff;">Ingreso:
+                                                                <strong id="horario2"></strong>
+                                                            </p>
+                                                            <p class="fw-semibold text-center mb-0" id="fecha3"></p>
+                                                            <p class="fw-semibold text-center" id="fecha4"></p>
+
+                                                        </div>
+                                                        <div class="row d-flex justify-content-center">
+                                                            <p class="fw-bold col-auto mb-0"
+                                                                style="background: #FFA800; color: #ffff; padding: 0 8px; border-radius: 5px;">
+                                                                Precio:</p>
+                                                            <p class="fw-bold col-auto mb-0" id="precio1"></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row d-flex justify-content-center m-1">
+                                                        <button id="botonReservar" type="button"
+                                                            class="btn fw-bold col-auto "
+                                                            style="background: #FFA800; color: #ffff; ">Reservar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="../administracion/js/script.js"></script>
 
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        //pasos
+        const triggerTabList = document.querySelectorAll('#myTab button')
+        triggerTabList.forEach(triggerEl => {
+            const tabTrigger = new bootstrap.Tab(triggerEl)
+
+            triggerEl.addEventListener('click', event => {
+                event.preventDefault()
+                tabTrigger.show()
+            })
+        })
+
+
+        document.getElementById("siguiente-btn").addEventListener("click", function () {
+            var nextTab = document.getElementById("dos-tab");
+            if (nextTab) {
+                nextTab.click();
+            }
+        });
+        document.getElementById("siguiente-btn2").addEventListener("click", function () {
+            var nextTab = document.getElementById("tres-tab");
+            if (nextTab) {
+                nextTab.click();
+            }
+        });
+        document.getElementById("siguiente-btn3").addEventListener("click", function () {
+            var nextTab = document.getElementById("cuatro-tab");
+            if (nextTab) {
+                nextTab.click();
+            }
+        });
+        document.getElementById("siguiente-btn4").addEventListener("click", function () {
+            var nextTab = document.getElementById("cinco-tab");
+            if (nextTab) {
+                nextTab.click();
+            }
+        });
+
+
+    </script>
+
+
 </body>
 
 </html>

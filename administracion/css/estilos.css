@@ -1,0 +1,19 @@
+.fecha-agregada:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+
+  .horario-agregado:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+
+  .categoria-agregada:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+
+  .plato-agregado:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
